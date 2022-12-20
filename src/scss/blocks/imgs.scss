@@ -1,0 +1,21 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+.img {
+  &--header {
+    position: relative;
+    &::before {
+      @include pseudo(128px, 6px);
+      background-color: white;
+      bottom: -6px;
+      left: 33px;
+      background: linear-gradient(45deg, #ffc593, #bc7198, #5a77ff);
+    }
+    @include responsive(laptop) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

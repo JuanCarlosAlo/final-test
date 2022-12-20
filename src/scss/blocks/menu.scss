@@ -1,0 +1,52 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.menu {
+  display: none;
+  position: absolute;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100vw;
+  left: 0;
+  top: 4rem;
+  background-color: var(--white);
+  font-size: 1.3rem;
+
+  @include responsive(laptop) {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    width: 1300px;
+  }
+
+  &__main {
+    margin-bottom: 2rem;
+    @include responsive(laptop) {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 0;
+      width: 50%;
+    }
+  }
+
+  &__item {
+    padding-top: 0.7rem;
+    padding-bottom: 1rem;
+  }
+
+  &__sec {
+    padding-top: 0.8rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.menu--show {
+  display: block;
+  z-index: 10;
+}

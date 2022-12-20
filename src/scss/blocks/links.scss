@@ -1,0 +1,12 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.main-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  letter-spacing: 5px;
+}

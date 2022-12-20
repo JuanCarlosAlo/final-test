@@ -1,1 +1,31 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
 
+.menu {
+  &__button {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3rem;
+    padding-top: 0.75rem;
+    width: 80%;
+    color: var(--white);
+    background-color: var(--black);
+
+    &::before {
+      @include pseudo(100%, 1px) {
+        top: -20px;
+        left: 0;
+        background-color: var(--black);
+      }
+    }
+
+    @include responsive(laptop) {
+      width: 150px;
+      margin: 0;
+    }
+  }
+}
