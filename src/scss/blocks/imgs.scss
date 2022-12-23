@@ -3,8 +3,15 @@
 @use "../mixins/hover.scss" as *;
 @use "../config/variables.scss" as *;
 .img {
-  &--header {
-    position: relative;
+  position: relative;
+  @include responsive(laptop) {
+    min-width: 55%;
+    &::before {
+      display: none;
+    }
+  }
+  &--gradiant {
+   
     &::before {
       @include pseudo(128px, 6px);
       background-color: white;
@@ -12,10 +19,7 @@
       left: 33px;
       background: linear-gradient(45deg, #ffc593, #bc7198, #5a77ff);
     }
-    @include responsive(laptop) {
-      &::before {
-        display: none;
-      }
-    }
+
+    
   }
 }

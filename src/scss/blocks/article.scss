@@ -3,24 +3,38 @@
 @use "../mixins/hover.scss" as *;
 @use "../config/variables.scss" as *;
 
-.article {
-  &-content {
-    @include responsive(laptop) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+.article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-      width: 50%;
-      padding-left: 4rem;
-      padding-right: 4rem;
+  @include responsive(laptop) {
+    flex-direction: row;
+  }
+
+  &-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @include responsive(laptop) {
+      flex-direction: row;
+      text-align: left;
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
   }
-  &--row {
+  &--reverse {
+    color: var(--white);
+    background-color: var(--black);
     @include responsive(laptop) {
-      display: flex;
       flex-direction: row-reverse;
-      color: var(--white);
-      background-color: var(--black);
+     
     }
+  }
+  &--white{
+    background-color: var(--white);
+    color: var(--black);
   }
 }
