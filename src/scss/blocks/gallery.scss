@@ -1,0 +1,63 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    color: var(--white);
+
+    @include responsive(laptop) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    &__item{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        height: 375px;
+        padding: 2rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include responsive(laptop) {
+            height: 500px;
+        }
+        
+        &__content{
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+        }
+        &--mountain{
+            background-image:linear-gradient( transparent , rgba(0, 0, 0, 0.7)), url(../assets/stories/mobile/mountains.jpg);
+
+            @include responsive(laptop) {
+                background-image:linear-gradient( transparent , rgba(0, 0, 0, 0.7)), url(../assets/stories/desktop/mountains.jpg);
+            }
+            
+        }
+        &--sunset{
+            background-image:linear-gradient( transparent , rgba(0, 0, 0, 0.7)), url(../assets/stories/mobile/cityscapes.jpg);
+
+            @include responsive(laptop) {
+                background-image:linear-gradient( transparent , rgba(0, 0, 0, 0.7)), url(../assets/stories/desktop/cityscapes.jpg);
+            }
+        }
+        &--voyage{
+            background-image:linear-gradient( transparent , rgba(0, 0, 0, 0.7)), url(../assets/stories/mobile/18-days-voyage.jpg);
+
+            @include responsive(laptop) {
+                background-image:linear-gradient( transparent , rgba(0, 0, 0, 0.7)), url(../assets/stories/desktop/18-days-voyage.jpg);
+            }
+        }
+        &--architecturals{
+            background-image:linear-gradient( transparent , rgba(0, 0, 0, 0.7)), url(../assets/stories/mobile/architecturals.jpg);
+
+            @include responsive(laptop) {
+                background-image:linear-gradient( transparent , rgba(0, 0, 0, 0.7)), url(../assets/stories/desktop/architecturals.jpg);
+            }
+        }
+    }
+}

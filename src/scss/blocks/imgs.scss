@@ -23,3 +23,22 @@
     
   }
 }
+
+.list{
+  &__img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    padding-top: 4rem;
+
+    &--limit{
+      padding-bottom: 2.5rem;
+    }
+  }
+}
+
+footer{
+  &__logo{
+    color: var(--white);
+  }
+}

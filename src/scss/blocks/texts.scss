@@ -2,3 +2,17 @@
   line-height: 25px;
   text-align: left;
 }
+
+.gallery{
+  &__text{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 0;
+  }
+}
+
+.list{
+  &__text{
+    text-align: center;
+  }
+}

@@ -7,6 +7,16 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  font-size: 12px;
   text-align: left;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
+}
+
+.gallery{
+  &__link{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 1rem;
+  }
 }

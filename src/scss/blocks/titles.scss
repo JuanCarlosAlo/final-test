@@ -3,6 +3,12 @@
 @use "../mixins/hover.scss" as *;
 @use "../config/variables.scss" as *;
 
+h1,
+h2,
+h3{
+  margin: 0;
+  padding: 0;
+}
 .title {
   font-size: 3rem;
   margin-top: 0;

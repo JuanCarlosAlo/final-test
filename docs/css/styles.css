@@ -376,6 +376,13 @@ body {
 }
 
 /* Variables SASS */
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 .title {
   font-size: 3rem;
   margin-top: 0;
@@ -391,6 +398,16 @@ body {
 .text {
   line-height: 25px;
   text-align: left;
+}
+
+.gallery__text {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0;
+}
+
+.list__text {
+  text-align: center;
 }
 
 .menu__button {
@@ -462,7 +479,79 @@ body {
   }
 }
 
-/* ESTILOS DEL FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__content {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__menu {
+    text-align: left;
+  }
+}
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__top {
+    gap: 4rem;
+  }
+}
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .footer__bottom {
+    text-align: right;
+    align-items: flex-end;
+    gap: 4rem;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  width: 170px;
+  margin-bottom: 2rem;
+}
+
 .menu {
   display: none;
   position: absolute;
@@ -521,8 +610,16 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
+  font-size: 12px;
   text-align: left;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
+}
+
+.gallery__link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 1rem;
 }
 
 .arrow--white {
@@ -549,6 +646,20 @@ body {
   bottom: -6px;
   left: 33px;
   background: linear-gradient(45deg, #ffc593, #bc7198, #5a77ff);
+}
+
+.list__img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  padding-top: 4rem;
+}
+.list__img--limit {
+  padding-bottom: 2.5rem;
+}
+
+footer__logo {
+  color: var(--white);
 }
 
 .article {
@@ -587,4 +698,97 @@ body {
 .article--white {
   background-color: var(--white);
   color: var(--black);
+}
+.article__list {
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+@media screen and (min-width: 1024px) {
+  .article__list {
+    gap: 50px;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: var(--white);
+}
+@media screen and (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.gallery__item {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 375px;
+  padding: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 1024px) {
+  .gallery__item {
+    height: 500px;
+  }
+}
+.gallery__item__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.gallery__item--mountain {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(../assets/stories/mobile/mountains.jpg);
+}
+@media screen and (min-width: 1024px) {
+  .gallery__item--mountain {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(../assets/stories/desktop/mountains.jpg);
+  }
+}
+.gallery__item--sunset {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(../assets/stories/mobile/cityscapes.jpg);
+}
+@media screen and (min-width: 1024px) {
+  .gallery__item--sunset {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(../assets/stories/desktop/cityscapes.jpg);
+  }
+}
+.gallery__item--voyage {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(../assets/stories/mobile/18-days-voyage.jpg);
+}
+@media screen and (min-width: 1024px) {
+  .gallery__item--voyage {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(../assets/stories/desktop/18-days-voyage.jpg);
+  }
+}
+.gallery__item--architecturals {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(../assets/stories/mobile/architecturals.jpg);
+}
+@media screen and (min-width: 1024px) {
+  .gallery__item--architecturals {
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(../assets/stories/desktop/architecturals.jpg);
+  }
+}
+
+.gallery__hr {
+  width: 100%;
+}
+
+.list__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list__img {
+  margin-bottom: 4rem;
+}
+
+.icon {
+  font-size: 1.5rem;
 }

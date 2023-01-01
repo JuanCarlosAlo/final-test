@@ -1,1 +1,72 @@
-/* ESTILOS DEL FOOTER */
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    color: var(--white);
+    background-color: var(--black);
+
+    @include responsive(laptop) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include responsive(laptop) {
+            flex-direction: row;
+            gap: 4rem;
+            
+        }
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        gap: 1rem;
+        @include responsive(laptop) {
+            text-align: left;
+        }
+    }
+    &__top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        @include responsive(laptop) {
+            gap: 4rem;
+        }
+    }
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include responsive(laptop) {
+            text-align: right;
+            align-items: flex-end;
+            gap: 4rem;
+        }
+    }
+}
+
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    width: 170px;
+    margin-bottom: 2rem;
+}
